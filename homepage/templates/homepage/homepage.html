@@ -43,7 +43,7 @@
 			<div class="col-md-6 text-center">
 				<img class="img-fluid" src="{% static 'homepage/img/main_image.png' %}">
 			</div>
-		</div> 
+		</div>
 	</div>
 	<img class="bottom-img" src="{% static 'homepage/img/bottom-img_1.png' %}">
 </section>
@@ -87,8 +87,9 @@
 	#about-us ul{
 		margin-left: 20px;
 	}
-	
+
 </style>
+{% url 'homepage:inquiry' as inquiry %}
 <section id="about-us">
 	<div class="container">
 		<h1 class="title text-center">ABOUT US</h1>
@@ -98,15 +99,13 @@
 			</div>
 			<div class="col-md-6">
 				<p class="about-title">Why We Are Different?</p>
-				<ul>
-					<li>Exprience </li>
-					<li>Achivement </li>
-					<li>History </li>
-					<li>Team  </li>
-					<li>Ports Active </li>
-				</ul>
+			    <p> H H Water Supply has rich experience of 10+ years in supplying Fresh Water and in Ship Chandling facility.
+                    We manage significant values on behalf of our customers.
+                    We take responsibility for the job being done in a professional, cost-effective manner that preserves their assets and reputation.
+			    </p>
+			    <a href="{{ inquiry }}"><button class="btn btn-primary">GET A QUOTE</button></a>
 			</div>
-			
+
 		</div>
 	</div>
 </section>
