@@ -1,0 +1,75 @@
+{% extends "homepage/navbar.html" %}
+{% load staticfiles %}
+{% block content %}
+<style type="text/css">
+	.gallery-div {
+		padding: 20px;
+	}
+	.gallery-img {
+		padding: 20px;
+
+	}
+	.title {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.title::before {
+		content: '';
+		background: #7b1789;
+		height: 5px;
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		transform: translateY(63px);
+	}
+	.title::after {
+		content: '';
+		background: #7b1789;
+		height: 10px;
+		width: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+		display: block;
+		transform: translateY(8px);
+	}
+</style>
+<section id="gallery">
+	<div class="container text-center">
+	<h1 class="title">GALLERY</h1>
+
+		<div class="row gallery-div">
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/1.jpg' %}">
+			</div>
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/2.jpg' %}">
+			</div>
+		</div>
+		<div class="row gallery-div">
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/7.jpg' %}">
+			</div>
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/4.jpg' %}">
+			</div>
+		</div>
+		<div class="row gallery-div">
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/5.jpg' %}">
+			</div>
+			<div class="col-sm-6 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/6.jpg' %}">
+			</div>
+		</div>
+		<div class="row gallery-div">
+			<div class="col-sm-12 gallery-img">
+				<img class="img-fluid" src="{% static 'homepage/img/3.jpg' %}">
+			</div>
+			
+		</div>
+
+	</div>
+</section>
+{% endblock %}

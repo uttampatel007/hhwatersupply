@@ -1,0 +1,91 @@
+{% extends "homepage/navbar.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<style type="text/css">
+	#services {
+		padding: 80px 0;
+	}
+	.service_img {
+		width: 30%;
+		margin-top: 20px
+	}
+	.services {
+		padding: 20px;
+		/*border: 1px solid black;*/
+	}
+	.services h4 {
+		padding: 5px;
+		margin-top: 25px;
+		text-transform: uppercase;
+	}
+	.title {
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+	.title::before {
+		content: '';
+		background: #7b1789;
+		height: 5px;
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		transform: translateY(63px);
+	}
+	.title::after {
+		content: '';
+		background: #7b1789;
+		height: 10px;
+		width: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+		display: block;
+		transform: translateY(8px);
+	}
+	.xyz{
+	    padding: 45px 25px;
+	    background: #f3f3f6;
+		border: 20px solid white;
+		border-radius: 30px
+	}
+
+
+</style>
+
+<section id="services">
+	<div class="container text-center">
+		<h1 class="title">SERVICES</h1>
+		<div class="row text-center">
+			<div class="col-sm-6 services xyz">
+				<img class="img-fluid service_img" src="{% static 'homepage/img/ro.png' %}">
+				<h4>RO Water</h4>
+				<p style="text-align: justify;">Reverse osmosis is a process where broken down or dissolved unnatural materials are extracted from water using a semipermeable membrane. It ensures drinking water is pure.</p>
+			</div>
+			<div class="col-sm-6 services xyz">
+				<img class="img-fluid service_img" src="{% static 'homepage/img/dm.png' %}">
+
+				<h4>DM Water</h4>
+				<p style="text-align: justify;">Demineralised water is specially purified water that has had most or all of its mineral and salt ions removed, such as Calcium, Magnesium, Sodium, Chloride, Sulphate, Nitrate and Bicarbonate. It is also known as Deionised water, DI or Demin water.</p>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-sm-6 services xyz">
+				<img class="img-fluid service_img" src="{% static 'homepage/img/iodise.png' %}">
+
+				<h4>Iodine Wash Salt</h4>
+				<p>P</p>
+			</div>
+			<div class="col-sm-6 services xyz">
+				<img class="img-fluid service_img" src="{% static 'homepage/img/borewell.png' %}">
+
+				<h4>Borwell Water</h4>
+				<p>
+				</p>
+			</div>
+		</div>
+	</div>	
+</section>
+
+{% endblock %}

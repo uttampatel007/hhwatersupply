@@ -1,0 +1,229 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>H H WATER SUPPLY</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Halant&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+	
+
+</head>
+<body>
+<style type="text/css">
+	* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			overflow-x: hidden;
+		}
+		#nav-bar {
+			position: sticky;
+			top: 0;
+			z-index: 10;
+		}
+		.navbar {
+			background-image: linear-gradient(to right, #a517ba, #5f1782);
+			padding: 0 !important;
+		}
+		.navbar-nav li{
+			padding: 0 10px;
+		}
+		.navbar-nav li a{
+			color: #fff !important;
+			font-weight: 600;
+			float: right;
+			text-align: left;
+		}
+		.navbar-toggler-icon {
+
+		}
+		.navbar-brand h4{
+			color: white;
+			padding-left: 10px;
+			font-family: 'Halant', serif;
+			margin-bottom: 0;
+			padding: 10px
+
+		}
+		.fa-bars {
+			color: #fff;
+			font-size: 30px !important;
+		}
+		.navbar-toggler {
+			outline: none !important;
+		}
+		section {
+			border: none;
+		}#wpforo-wrap .wpforo-forum-icon {
+    display: block !important;
+}
+
+@media screen and (max-width: 620px)
+    #wpforo-wrap .wpfl-1 .wpforo-forum-info {
+    width: auto !important;
+}
+</style>
+<section id="nav-bar">
+	 	{% url 'homepage:homepage' as homepage %}
+        {% url 'homepage:services' as services %}
+        {% url 'homepage:gallery' as gallery %}
+        {% url 'homepage:contact' as contact %}
+        {% url 'homepage:inquiry' as inquiry %}
+	<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+	  <a class="navbar-brand" href="#"><h4 >H H WATER SUPPLY</h4></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav ml-auto">
+	      <li {% if request.path == homepage %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+	        <a class="nav-link" href="{{ homepage }}">HOME</a>
+	      </li>
+	      <li {% if request.path == services %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+	        <a class="nav-link" href="{{ services }}">SERVICES</a>
+	      </li>
+	      <li {% if request.path == gallery %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+	        <a class="nav-link" href="{{ gallery }}">GALLERY</a>
+	      </li>
+	      <li {% if request.path == inquiry %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+	        <a class="nav-link" href="{{ inquiry }}">INQUIRY</a>
+	      </li>
+	      <li {% if request.path == contact %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+	        <a class="nav-link" href="{{ contact }}">CONTACT</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+</section>
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+<style type="text/css">
+	#footer {
+		background-image: linear-gradient(to right, #a517ba, #5f1782);
+		color: #fff;
+	}
+	.footer-img {
+		width: 100%;
+	}
+	.footer-box {
+		padding: 20px;
+	}
+	.footer-box img {
+		width: 120px;
+		margin-bottom: 20px;
+	}
+	.footer-box .fas {
+		margin-right: 8px;
+		font-size: 25px;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		padding-top: 7px;
+		border-radius: 2px;
+		background-image: linear-gradient(to right, #a517ba, #5f1782);
+	}
+	.footer-box .far {
+		margin-right: 8px;
+		font-size: 25px;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		padding-top: 7px;
+		border-radius: 2px;
+		background-image: linear-gradient(to right, #a517ba, #5f1782);
+	}
+	hr {
+		background-color: white;
+	}
+	.copywrite {
+		margin-bottom: 0;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+
+</style>
+
+
+<section id="footer">
+	<img class="footer-img" src="{% static 'homepage/img/bottom-img_12.png' %}">
+	<div class="container">
+		<h3></h3>
+		<div class="row">
+		
+			<div class="col-md-6 footer-box">
+				<img src="">	
+				<p><i class="fas fa-map-marker-alt"></i> <b>ADDRESS</b></p>
+				<div style="padding-left: 55px">
+				<p> 2, Lalji Chamber,<br> 
+					National Highway No. 8/A, <br>
+					Opp. FCI Godown, KASEZ, <br>
+					Gandhidham - 370 201,<br>
+					Gujarat(INDIA)</p>
+	
+				</div>
+				
+				<p><i class="fas fa-phone-volume"></i></i> (+91) 9824286952 / 8141380555</p>
+				<p><i class="far fa-envelope"></i></i>hhwatersupply@gmail.com<gmail class="com"></gmail></p>
+				<p></p>
+			</div>
+			
+			<div class="col-md-6 text-center">
+					<img class="footer-img" src="{% static 'homepage/img/12.png' %}">
+				
+			</div>
+			</div>
+
+			<hr>
+			<p class="copywrite">copywrite © 2019 H H WATER SUPPLY</p>
+			<p class="copywrite">Designed By: ShreejiDevelopers</p>
+		</div>
+		
+	
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
